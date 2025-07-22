@@ -6,15 +6,17 @@ const form = document.getElementById('formAdd')
 //Array para para atividades e notas
 const nomes =[];
 
-
+let comprimentoNomes = '';
 
 let linhas = '';
+
 
 form.addEventListener('submit', function(e){
     e.preventDefault ();
 
     addLinha();
     atualizaTabela();
+    atualizaContador();
 });
 
 function addLinha(){
@@ -25,7 +27,9 @@ function addLinha(){
         alert(`O contato <b>${inputNomeContato.value}</b> já existe !`)
     }else{
     nomes.push(inputNomeContato.value);
-    
+
+    let contador = `<tr><th>Nome</th><th>Numero contato</th><th>${nomes.length}</th></tr>`;
+    comprimentoNomes = contador
     let linha = `<tr><td>${inputNomeContato.value}</td><td>${inputNumeroContato.value}</td></tr>`;
     linhas += linha;
     }
@@ -38,3 +42,7 @@ function atualizaTabela(){
     corpoTabela.innerHTML = linhas;
 }
 
+function atualizaContador(){
+    const headerTabela = document.querySelector('thead');
+    headerTabela.innerHTML = comprimentoNomes;
+}
