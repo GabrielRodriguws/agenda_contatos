@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+    padding-top: 100px;
+    background-color: aliceblue;
+}
+
+.container{
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+
+header h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header img{
+    height: 36px;
+    margin-right: 18px;
+}
+
+form button{
+    background-color: steelblue;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+form input{
+    font-size: 20px;
+    background-color: aliceblue;
+    border: none;
+    max-width: 290px;
+}
+
+form input:focus{
+    border-bottom: 2px solid steelblue;
+    outline: none;
+}
+
+.container form{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 840px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+
+#nomeContato{
+    margin-left: 18px;
+}
+
+table{
+    align-items: start;
+    justify-content: space-between;
+    max-width: 960px;
+    width: 100%;
+    text-align: start;
+    font-size: 24px;
+    text-align: center;
+}
+
+table th{
+    border-bottom: 2px solid rgba(25, 25, 112, 0.605);
+}
+
+table td{
+    font-size: 20px;
+    padding: 18px;
+    border-bottom: 1px solid rgba(25, 25, 112, 0.405);
+}
+
+
+
+/* Remove setas dos inputs type="number" (Webkit browsers) */
+.container form input[type="number"]::-webkit-inner-spin-button,
+.container form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove as setas padrão */
+    margin: 0;                /* Remove margem extra */
+}
+
+/* Remove setas dos inputs type="number" (Firefox) */
+.container form input[type="number"] {
+    -moz-appearance: textfield; /* Remove as setas no Firefox */
+}
